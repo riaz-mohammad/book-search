@@ -1,0 +1,24 @@
+<wrapper [style.--height]="'800px'">
+  <app-search-bar #search></app-search-bar>
+  
+<ng-container *ngIf="!(bookService.booksCopies$.value)">
+<app-list-wrapper @searchBarList *ngIf="bookService.books$ | async as books">
+      <ng-container ngProjectAs="[list]">
+        <app-search-bar-list *ngFor="let book of books" (click)="findBook(book)">
+          {{ book.volumeInfo.title | slice: 0 : 60}} 
+        </app-search-bar-list>
+      </ng-container>
+</app-list-wrapper>
+</ng-container>  
+
+      
+<ng-container *ngIf='bookService.booksCopies$ | async as books'>
+  <app-search-card [books]="books">
+  </app-search-card>
+</ng-container>
+
+
+</wrapper>
+
+
+  

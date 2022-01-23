@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 70%);
+  
+
+  app-search-bar-list {
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    font-size: 13px;
+    border: 1px solid rgba(0, 0, 0, 20%);
+    border-radius: 20px;
+    border-bottom-color: hsla(0, 0%, 0%, 0.50);
+    color: rgba(255, 255, 255, 0.5);
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+
+
+
