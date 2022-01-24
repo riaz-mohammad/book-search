@@ -2,13 +2,13 @@
 import { Component, ViewChild } from '@angular/core';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { Book, BookService } from './book.service';
-import { button, searchBarList } from './animations';
+import { button, horizontal, searchBarList } from './animations';
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
-  animations: [searchBarList, button],
+  animations: [searchBarList, button, horizontal]
 })
 export class AppComponent {
   @ViewChild(SearchBarComponent, { static: true })

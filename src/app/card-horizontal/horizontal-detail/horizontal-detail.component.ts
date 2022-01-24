@@ -26,7 +26,7 @@ import { Component, Input, OnInit } from '@angular/core';
         transform: scale(0.9);
         color: rgba(255, 255, 255, 0.7);
         &:hover {
-          color: rgba(255, 255, 255, 0.9);
+          color: rgba(255, 255, 255, 1);
         }
       }
 

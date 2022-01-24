@@ -22,6 +22,12 @@ import { horizontalImage } from '../animations';
         height: 80px;
         width: 100%;
       }
+      app-image{
+        transition: transform 300ms ease;
+      }
+      app-image:hover{
+        transform: scale(1.2);
+      }
     `,
   ],
   animations: [horizontalImage],

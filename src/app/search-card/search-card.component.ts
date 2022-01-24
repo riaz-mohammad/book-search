@@ -1,6 +1,6 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
-import { card } from './../animations';
+import { card, horizontal } from './../animations';
 import { Book } from './../book.service';
 
 @Component({
@@ -14,14 +14,12 @@ import { Book } from './../book.service';
           <app-card-horizontal
             *ngIf="!card.cardExpanded && horizontal"
             [book]="book"
-            [source]="source"
-          >
+            [source]="source">
           </app-card-horizontal>
 
           <app-card-vertical
             *ngIf="card.cardExpanded && vertical"
-            [book]="book"
-          >
+            [book]="book">
           </app-card-vertical>
         </app-card>
       </ng-container>
@@ -60,7 +58,7 @@ import { Book } from './../book.service';
     `,
   ],
 
-  animations: [card],
+  animations: [card, horizontal],
 })
 export class SearchCardComponent {
   @HostBinding('@card')

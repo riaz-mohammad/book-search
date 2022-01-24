@@ -3,6 +3,10 @@ import { animate, animateChild, animation, group, query, stagger, style, transit
 
 export const card = [
   trigger('card', [
+
+  transition(':leave', [
+    query('@horizontal', [animateChild()], {optional: true})
+  ]),
     transition(':enter', [
       query(
         'app-card',
@@ -14,7 +18,7 @@ export const card = [
 
           stagger('50ms', [
             animate(
-              '500ms 600ms ease',
+              '500ms 700ms ease',
               style({
                 opacity: 1,
                 transform: 'translateX(0%)',
@@ -28,6 +32,7 @@ export const card = [
       ),
     ]),
   ]),
+
 ];
 
 
@@ -162,5 +167,22 @@ export const button = trigger('button', [
     animate('200ms ease', style({
       opacity: 0
     }))
+  ])
+]);
+
+export const horizontal = trigger('horizontal', [
+  transition(':leave', [
+
+    query('app-card-horizontal', [
+      style({
+        opacity: 1
+      }),
+
+      stagger('50ms', [
+        animate('300ms ease', style({
+          opacity: 0
+        }))
+      ])
+    ], {optional: true})
   ])
 ])

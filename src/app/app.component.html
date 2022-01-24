@@ -12,7 +12,7 @@
 
       
 <ng-container *ngIf='bookService.booksCopies$ | async as books'>
-  <app-search-card [books]="books" [searchBook]="search.search.value">
+  <app-search-card [books]="books" [searchBook]="search.search.value" @horizontal>
   </app-search-card>
 </ng-container>
 

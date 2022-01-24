@@ -20,8 +20,11 @@ import { Component, OnInit } from '@angular/core';
         background-color: rgba(0, 0, 0, 20%);
         font-size: 1rem;
         z-index: 100;
+        transition: all 300ms ease;
+        outline: 1px solid transparent;
         &:hover {
           color: rgba(255, 255, 255, 0.8);
+          outline-color: rgba(255, 255, 255, 0.2);
         }
       }
     `,
