@@ -24,6 +24,7 @@ import { BookDescriptionComponent, } from './card-vertical/book-description/book
 import { BookDetailComponent } from './card-vertical/book-detail/book-detail.component';
 import { BookThumbnailPipe } from './book-thumbnail.pipe';
 import { BackArrowComponent } from './back-arrow/back-arrow.component';
+import { StartSearchButtonComponent } from './start-search-button/start-search-button.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { BackArrowComponent } from './back-arrow/back-arrow.component';
     BookDescriptionComponent,
     BookThumbnailPipe,
     BackArrowComponent,
+    StartSearchButtonComponent,
   ],
   imports: [
     BrowserModule,

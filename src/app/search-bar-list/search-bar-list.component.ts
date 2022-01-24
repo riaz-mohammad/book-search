@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
         display: flex;
         align-items: center;
         box-sizing: border-box;
-        height: 40px;
+        height: 45px;
+        width: 90%;
         p {
           width: max-content;
-          margin-left: 30px;
         }
       }
     `,

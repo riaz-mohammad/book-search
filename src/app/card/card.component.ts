@@ -22,7 +22,7 @@ import { Component, HostListener, Input } from '@angular/core';
 
         &.expand {
           height: 600px;
-          box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.2);
+          /* box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.2); */
         }
       }
       

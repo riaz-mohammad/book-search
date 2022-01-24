@@ -27,12 +27,8 @@ import { Subscription } from 'rxjs';
         border-radius: 35px;
         box-sizing: border-box;
         transition: all 300ms ease;
+      }
         
-      }
-      input::placeholder {
-        color: rgba(255, 255, 255, 0.5);
-        transition: all 300ms ease;
-      }
 
       input {
         color: white;
@@ -47,7 +43,6 @@ import { Subscription } from 'rxjs';
         border-radius: 30px;
         background-color: rgba(0, 0, 0, 20%);
         transition: all 300ms ease;
-        border: 1px solid rgba(0, 0, 0, 0.1);
         box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
       }
 
@@ -55,9 +50,6 @@ import { Subscription } from 'rxjs';
         background-color: rgba(0, 0, 0, 30%);
       }
 
-      input:focus::placeholder {
-        color: rgba(255, 255, 255, 0.8);
-      }
 
       app-cancel-button {
         background: rgba(0, 0, 0, 20%);

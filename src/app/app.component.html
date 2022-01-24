@@ -1,6 +1,5 @@
-<wrapper [style.--height]="'800px'">
-  <app-search-bar #search></app-search-bar>
-  
+<wrapper>
+  <app-search-bar #search [class.show]="hideButton"></app-search-bar>
 <ng-container *ngIf="!(bookService.booksCopies$.value)">
 <app-list-wrapper @searchBarList *ngIf="bookService.books$ | async as books">
       <ng-container ngProjectAs="[list]">
@@ -13,10 +12,14 @@
 
       
 <ng-container *ngIf='bookService.booksCopies$ | async as books'>
-  <app-search-card [books]="books">
+  <app-search-card [books]="books" [searchBook]="search.search.value">
   </app-search-card>
 </ng-container>
 
+  <app-start-search-button (click)="startSearch()" 
+                       @button *ngIf="!hideButton">
+    SEARCH A BOOK
+  </app-start-search-button>
 
 </wrapper>
 
